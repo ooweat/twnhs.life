@@ -22,7 +22,46 @@
   <!-- ✅ 실제 포워딩 -->
   <meta http-equiv="refresh" content="0; url=https://makedear.com/mcard/view/OEi8jbZ" />
   <link rel="canonical" href="https://makedear.com/mcard/view/OEi8jbZ" />
+  <script data-n-head="ssr" src="https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js" integrity="sha384-x+WG2i7pOR+oWb6O5GV5f1KN2Ko6N7PTGPS7UlasYWNxZMKQA63Cj/B2lbUmUfuC" crossorigin="anonymous"></script>
   <script>
+    Kakao.init('659a7e7b8b5bd6253467586377e9774f')
+
+;(function () {
+  const w = window
+  if (w.ChannelIO) {
+    return (window.console.error || window.console.log || function () {})('ChannelIO script included twice.')
+  }
+  const ch = function () {
+    ch.c(arguments)
+  }
+  ch.q = []
+  ch.c = function (args) {
+    ch.q.push(args)
+  }
+  w.ChannelIO = ch
+  function l () {
+    if (w.ChannelIOInitialized) {
+      return
+    }
+    w.ChannelIOInitialized = true
+    const s = document.createElement('script')
+    s.type = 'text/javascript'
+    s.async = true
+    s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js'
+    s.charset = 'UTF-8'
+    const x = document.getElementsByTagName('script')[0]
+    x.parentNode.insertBefore(s, x)
+  }
+  if (document.readyState === 'complete') {
+    l()
+  } else if (window.attachEvent) {
+    window.attachEvent('onload', l)
+  } else {
+    window.addEventListener('DOMContentLoaded', l, false)
+    window.addEventListener('load', l, false)
+  }
+})()
+
     // 보조: 메타 리프레시가 무시되거나 느린 클라이언트 대비
     (function () {
       var to = "https://makedear.com/mcard/view/OEi8jbZ";
