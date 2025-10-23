@@ -1,11 +1,25 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Wedding Calendar//Taewoo & Hyesun//KR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
 BEGIN:VEVENT
+UID:taewoo-hyesun-wedding-20260110@twnhs.life
+DTSTAMP:20251023T000000Z
 DTSTART;TZID=Asia/Seoul:20260110T110000
 DTEND;TZID=Asia/Seoul:20260110T120000
 SUMMARY:태우♥혜선 결혼식
 DESCRIPTION:태우와 혜선의 결혼식에 초대합니다!
 LOCATION:웨스턴베니비스 신도림 7층 다이너스티홀
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:📅 일주일 후 태우♥혜선 결혼식입니다.
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:💒 내일은 태우♥혜선 결혼식입니다.
+END:VALARM
 END:VEVENT
 END:VCALENDAR
