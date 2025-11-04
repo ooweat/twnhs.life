@@ -18,6 +18,388 @@
   <meta data-hid="og:site_name" property="og:site_name" content="김태우❤️ 이혜선 결혼합니다.">
   <meta data-hid="og:description" property="og:description" content="26.01.10(토) 오전 11시 웨스턴베니비스 신도림, 다이너스티홀">
   <meta data-hid="description" name="description" content="26.01.10(토) 오전 11시 웨스턴베니비스 신도림, 다이너스티홀">
+
+  <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        place-items: center;
+        background: whitesmoke;
+      }
+
+      p{
+        margin: 0;
+      }
+
+      @keyframes blip {
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .container {
+        width: 300px;
+        height: 550px;
+        background: url('./twnhs.jpg');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: 100%;
+        border-radius: 45px;
+        box-shadow: inset 0 0 0 9px black;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-family: Arial;
+        transition: 0.5s ease;
+      }
+
+      .date-container {
+        top: 5%;
+        position: relative;
+        text-align: center;
+      }
+
+      .fa-lock {
+        position: relative;
+        font-size: 1.4rem;
+      }
+
+      .time {
+        font-size: 3.5rem;
+      }
+
+      .top-tab {
+        width: 55%;
+        height: 2rem;
+        margin: 0 auto;
+        background: black;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .speaker {
+        height: 0.4rem;
+        width: 25%;
+        background: #151515;
+        border-radius: inherit;
+      }
+
+      .camera {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #151515;
+        margin-left: 0.5rem;
+      }
+
+      .lock-btn,
+      .silent-btn,
+      .vol-up-btn,
+      .vol-down-btn {
+        position: absolute;
+        background: #252525;
+        border-radius: 2px;
+        width: 0.3rem;
+      }
+
+      .lock-btn {
+        height: 4rem;
+        right: -0.25rem;
+        top: 7rem;
+        cursor: pointer;
+      }
+
+      .lock-btn::after {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        width: 5rem;
+        height: 5rem;
+        transform: scale(0.5);
+        border-radius: 50%;
+        background: lightblue;
+        left: -2.5rem;
+        top: -0.5rem;
+        opacity: 0.3;
+        animation: blip 1.4s ease infinite;
+        pointer-events: inherit;
+      }
+
+      .silent-btn {
+        height: 1.3rem;
+        left: -0.25rem;
+        top: 3.5rem;
+      }
+
+      .vol-up-btn {
+        height: 2.7rem;
+        left: -0.25rem;
+        top: 6rem;
+      }
+
+      .vol-down-btn {
+        height: 2.7rem;
+        left: -0.25rem;
+        top: 9.5rem;
+      }
+
+      .torch,
+      .camera-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        bottom: 3rem;
+        display: grid;
+        place-items: center;
+      }
+
+      .torch {
+        left: 2.5rem;
+      }
+
+      .camera-btn {
+        right: 2.5rem;
+      }
+
+      .swipe-bar {
+        width: 35%;
+        height: 0.3rem;
+        background: whitesmoke;
+        border-radius: 8px;
+        position: absolute;
+        bottom: 1rem;
+      }
+
+      .right-top-container {
+        position: absolute;
+        top: 1.4rem;
+        right: 1.5rem;
+        display: flex;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      .right-top-container > div {
+        margin: 0 1px;
+      }
+
+      .radar-container {
+        display: flex;
+      }
+
+      .radar {
+        width: 100%;
+        height: 0.4rem;
+        position: relative;
+        display: inline-flex;
+        align-items: end;
+        text-align: center;
+        margin: auto 0px;
+      }
+
+      .radar > div {
+        width: 1.3px;
+        margin-right: 1px;
+        background: white;
+        height: 25%;
+        border-radius: 0.3px;
+      }
+
+      .radar > div:nth-child(2) {
+        height: 50%
+      }
+
+      .radar > div:nth-child(3) {
+        height: 75%
+      }
+
+      .radar > div:nth-child(4) {
+        height: 100%
+      }
+
+
+      .frequency {
+        width: 1rem;
+        height: 0.6rem;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .frequency::before {
+        content: "5G";
+        font-size: 8px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 1px;
+      }
+
+      .battery {
+        width: 1rem;
+        height: 0.5rem;
+        border-radius: 2px;
+        border: 1px solid lightgray;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .battery::before {
+        content: "100";
+        font-size: 8px;
+        background: #5fe777;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 1px;
+      }
+
+      .battery::after {
+        content: "";
+        height: 0.1rem;
+        width: 0.10rem;
+        background: lightgray;
+        position: absolute;
+        left: 102%;
+        border-radius: inherit;
+      }
+
+      .locked {
+        background: #252525 !important;
+        color: #252525;
+        border-width: 0;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+      }
+
+      .glass {
+        position: relative;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(2px) saturate(180%);
+        border: 0.0625rem solid rgba(255, 255, 255, 0.8);
+        border-radius: 2rem;
+        padding: 1.25rem;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3);
+      }
+
+      .glass::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2rem;
+        backdrop-filter: blur(1px);
+        box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+        inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+        opacity: 0.6;
+        z-index: -1;
+        filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+      }
+
+      @media (max-width: 500px) {
+        .container {
+          width: 90%;
+          height: 610px;
+        }
+
+        .locked {
+          background: #252525;
+          color: #252525;
+        }
+
+        @keyframes blip {
+          to {
+            transform: scale(1);
+          }
+        }
+      }
+
+      .widget-container {
+        margin-top: 10%;
+        display: inline-block;
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        gap: 1.25rem;
+        max-width: 62.5rem;
+        width: 80%;
+      }
+
+      /* Content style */
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.9375rem;
+        margin-bottom: 0.9375rem;
+      }
+
+      .icon {
+        position: relative;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 0.625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+      }
+
+      .icon::after {
+        border-radius: 0.625rem;
+      }
+
+      .card-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        margin: 0;
+      }
+
+      .card-subtitle {
+        font-size: 0.8rem;
+        color: white;
+        margin: 0.3125rem 0 0 0;
+      }
+
+      .card-content {
+        color: white;
+        line-height: 1.6;
+      }
+
+      .btn-glass {
+        position: relative;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 0.9375rem;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      .btn-glass::after {
+        border-radius: 0.75rem;
+      }
+
+      .btn-glass:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+    </style>
   
   <!-- ✅ 실제 포워딩 -->
   <meta http-equiv="refresh" content="0; url=https://makedear.com/mcard/view/OEi8jbZ" />
@@ -71,8 +453,83 @@
   </script>
 </head>
 <body>
-  <p>청첩장으로 이동 중입니다…<br>
-    이동이 안될 경우 <a href="https://makedear.com/mcard/view/OEi8jbZ">여기를 눌러 이동</a>하세요.
-  </p>
+
+<div class="container">
+    <div class="top-tab">
+        <div class="speaker"></div>
+        <div class="camera"></div>
+    </div>
+    <div class="date-container">
+        <i class="fas fa-lock"></i>
+        <div class="date"></div>
+        <div class="time"></div>
+    </div>
+    <div class="lock-btn"></div>
+    <div class="silent-btn"></div>
+    <div class="vol-up-btn"></div>
+    <div class="vol-down-btn"></div>
+    <div class="widget-container">
+        <div class="glass">
+            <div class="card-header">
+                <div class="icon glass">📝</div>
+                <div>
+                    <h3 class="card-title">태우♥혜선</h3>
+                    <p class="card-subtitle">청첩장으로 자동 이동 중</p>
+                </div>
+            </div>
+            <div class="card-content">
+                                  <p>
+                                      이동이 되지 않을 경우 아래 버튼을 눌러주세요
+                                  </p>
+                                  <a href="https://makedear.com/mcard/view/OEi8jbZ" class="btn-glass glass">이동하기</a>
+                                </div>
+        </div>
+    </div>
+    <div class="torch"><i class="fas fa-lightbulb"></i></div>
+    <div class="camera-btn"><i class="fas fa-camera"></i></div>
+    <div class="swipe-bar"></div>
+    <div class="right-top-container">
+        <div class="radar-container">
+            <div class="radar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="frequency-container">
+            <div class="frequency"></div>
+        </div>
+        <div class="battery-container">
+            <div class="battery"></div>
+        </div>
+    </div>
+</div>
+
+<div class="shadow"></div>
 </body>
+</html>
+<script type="text/javascript">
+    const timeDiv = document.querySelector(".time");
+    const dateDiv = document.querySelector(".date");
+    const lockBtn = document.querySelector(".lock-btn");
+    const screen = document.querySelector(".container");
+    const torch = document.querySelector(".torch");
+    const cameraBtn = document.querySelector(".camera-btn");
+    const swipeBar = document.querySelector(".swipe-bar");
+    const widget = document.querySelector(".widget-container");
+    const battery = document.querySelector(".battery-container");
+
+    timeDiv.innerHTML = '11:00';
+    dateDiv.textContent = '01월 10일 (토)'
+
+    lockBtn.addEventListener("click", function () {
+        screen.classList.toggle("locked");
+        cameraBtn.classList.toggle("locked");
+        torch.classList.toggle("locked");
+        swipeBar.classList.toggle("locked");
+        widget.classList.toggle("locked");
+        battery.classList.toggle("hidden");
+    });
+</script>
 </html>
